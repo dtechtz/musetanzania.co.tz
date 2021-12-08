@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d0a126d1-33c9-4501-bbab-a821c4acf9c5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="28"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT  members.ID,members.Fname,members.Mname,members.Lname,members.Gender,members.Birth_Date,members.Region,members.District,members.Phone,members.Email,members.Id_Type,members.Id_number,(loan_group.ID) AS LID,members.Group_name,members.Work_status,members.Address,members.Status, loan_group.ID, (loan_group.Name) AS LoanGroup, loan_group.Description from members  INNER JOIN  loan_group ON members.Group_name = loan_group.ID]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Mname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Lname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Birth_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Region" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="District" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Phone" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Id_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Id_number" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LID" class="java.lang.Integer"/>
+	<field name="Group_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Work_status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LoanGroup" class="java.lang.String"/>
+	<field name="Description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="0" width="842" height="29" forecolor="#FFFFFF" backcolor="#006666" uuid="07212582-f0dd-40d0-8f31-a48efa245a79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MICRO FINANCE FOR  SMALL ENTERPRISES TANZANIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="46" width="172" height="20" uuid="8186d105-45da-428f-891d-403d2649edde"/>
+				<text><![CDATA[Phone number: +255 28271 0007]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="46" width="216" height="20" uuid="57507f08-a6e6-4fba-bb14-da9988c410e1"/>
+				<text><![CDATA[Emeil Address:  msetanzania@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="245" y="29" width="298" height="17" forecolor="#FFFF33" backcolor="#009999" uuid="b5fec9e8-0728-4509-8dd6-f03423a4fa10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Let's Walk Together]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="0" width="636" height="20" uuid="8f6d866a-e8d1-4cbe-bf0c-feef3b6416c0"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[List of  all Registered Members ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="34" y="19" width="768" height="1" uuid="6f437d78-5fe9-40ce-a965-d9f47bfb5e87"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="135" height="20" uuid="b144ef47-92b0-4d04-826d-3f4d8bc20589"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FIRST NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="0" width="134" height="20" uuid="425ce8b1-7cd7-4f05-b1a5-160cbfdc2d2f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MIDDLE  NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="0" width="119" height="20" uuid="13a7579c-9862-490d-b164-c8d7368029a2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAST  NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="0" width="122" height="20" uuid="4f8c8323-5826-4791-8591-66627e84d1b1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PHONE  NUMBER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="607" y="-1" width="186" height="20" uuid="1ae3c2d4-e82e-43ef-b93c-41796cf465f7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GROUP  NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="0" width="87" height="20" uuid="2f596e9c-812b-43ee-bf1d-d72ba658ffb0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GENDER]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="135" height="20" uuid="8da5c3cb-6144-4540-bc2b-628a57d19d8e"/>
+				<textFieldExpression><![CDATA[$F{Fname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="0" width="136" height="20" uuid="bf0d6fd2-ba27-438e-b6bb-8ba0cb570ef8"/>
+				<textFieldExpression><![CDATA[$F{Mname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="0" width="123" height="20" uuid="7b34afb2-4ca0-4527-987e-13efb4db1083"/>
+				<textFieldExpression><![CDATA[$F{Lname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="0" width="122" height="20" uuid="96b1e152-07d9-4042-b135-2698ef198399"/>
+				<textFieldExpression><![CDATA[$F{Phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="609" y="0" width="186" height="20" uuid="5d362bf5-b0cd-4e6d-ab7b-1e97676b5637"/>
+				<textFieldExpression><![CDATA[$F{LoanGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="0" width="87" height="20" uuid="1e618658-6d7c-43e1-9fc7-b3c0f5210007"/>
+				<textFieldExpression><![CDATA[$F{Gender}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="34" width="802" height="20" forecolor="#FFFF00" backcolor="#006666" uuid="4ff33f07-3409-44fd-b3aa-818a9af569e2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thank you for being among of us!!]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

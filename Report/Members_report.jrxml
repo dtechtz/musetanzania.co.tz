@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f9534912-668b-44fc-be93-9cf8ee9d1ee1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="168"/>
+	<parameter name="RegID" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT  members.ID,(members.Reg_ID) AS Autoreg,members.Fname,members.Mname,members.Lname,members.Gender,members.Birth_Date,members.Region,members.District,members.Phone,members.Email,members.Id_Type,members.Id_number,(loan_group.ID) AS LID,members.Group_name,members.Work_status,members.Ward,members.BName,members.BIncome,members.OSource,members.OIncome,members.FProperty,members.SProperty,members.TProperty,members.Fees,members.Status, loan_group.ID, (loan_group.Name) AS LoanGroup, loan_group.Description,regional.ID,regional.Regional_Name,district.ID,district.Reg_ID,district.District_Name from members  INNER JOIN  loan_group ON members.Group_name = loan_group.ID INNER JOIN regional ON regional.ID = members.Region INNER JOIN district ON district.ID = members.District WHERE members.Reg_ID =$P{RegID}]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Autoreg" class="java.lang.Integer"/>
+	<field name="Fname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Mname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Lname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Birth_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Region" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="District" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Phone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Id_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Id_number" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LID" class="java.lang.Integer"/>
+	<field name="Group_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Work_status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Ward" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OSource" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OIncome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FProperty" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SProperty" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TProperty" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fees" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LoanGroup" class="java.lang.String"/>
+	<field name="Description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Regional_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Reg_ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="District_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="555" height="26" uuid="0ac0a9f4-9a76-4d37-9785-72e3a7b1d63a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MICRO FINANCE FOR SMALL ENTERPRISES TANZANIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="19" width="396" height="14" uuid="e57849f8-b537-4c00-89ba-e82d588b6334"/>
+				<text><![CDATA[Email:: msetanzania@gmail.com      Phone::+255 28271 0007]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="6" width="555" height="20" uuid="28dfd922-7096-48a0-b095-f107365f942d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FOMU  YA MAOMBI BINAFSI  YA MKOPO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="26" width="302" height="20" uuid="3c5c2ae9-eb84-47a7-81ca-1ed0b29a2410"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[TAARIFA  ZA MWOMBAJI WA  MKOPO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="128" y="0" width="311" height="20" uuid="6474b882-00ab-4746-b21d-c4b3f23d2a0e"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[JINA  KAMILI  LA  MTEJA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="0" width="122" height="20" uuid="4d2c61ec-39e6-4ba5-9dee-430df1808e25"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<text><![CDATA[NAMBA  YA USAJIRI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="0" width="116" height="20" uuid="814096a4-d2a5-4058-bed2-98b09e25ebc4"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[JINA  LA  KIKUNDI]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="118" height="20" uuid="a50c6ff6-cc3a-4f86-8344-e70d80b88f24"/>
+				<textFieldExpression><![CDATA[$F{Autoreg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="0" width="70" height="20" uuid="504e7bef-e8f1-49b0-9423-2969cc136a06"/>
+				<textFieldExpression><![CDATA[$F{Fname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="0" width="80" height="20" uuid="c3fd2685-5e86-4073-b26d-067a10c3252d"/>
+				<textFieldExpression><![CDATA[$F{Mname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="0" width="127" height="20" uuid="851f0d6a-d9b1-42ec-bfc2-7b51a11c7a23"/>
+				<textFieldExpression><![CDATA[$F{Lname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="0" width="116" height="20" uuid="d4748f95-a07b-484b-863f-e739efea41cd"/>
+				<textFieldExpression><![CDATA[$F{LoanGroup}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="11" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="665" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="4" y="49" width="555" height="20" forecolor="#FFFFFF" backcolor="#006666" uuid="8c560e28-180b-4f9f-b14a-a2024b405667"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEHEMU  A:  TAARIFA  ZA MTEJA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="70" width="178" height="20" uuid="2d6af871-e276-49f5-9141-672cd5bfee8a"/>
+				<text><![CDATA[Mwombaji  anaishi  katika mkoa  wa ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="69" width="63" height="20" uuid="4158cc60-3504-4405-adf5-b127f4c616a7"/>
+				<text><![CDATA[wilaya  ya ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="70" width="87" height="20" uuid="0dcedd77-d46d-4627-b91f-a68ed32d9f44"/>
+				<text><![CDATA[Katika  kata  ya ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="178" y="69" width="128" height="20" uuid="665df2e7-cccc-4336-8a12-024e12161b9a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Regional_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="70" width="97" height="20" uuid="c985d784-e49c-4fb8-869d-bf0b7ad8731f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{District_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="90" width="116" height="20" uuid="e7e55383-49ef-4f81-8be4-1c86369e4084"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Ward}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="116" y="90" width="201" height="20" uuid="e935fea0-1244-48f1-82dd-55b3a41413ea"/>
+				<text><![CDATA[Aina ya kitambulisho  cha mwombaji  ni ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="317" y="89" width="120" height="20" uuid="095a3320-e6eb-411a-a1f0-24ba96c73182"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Id_Type}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="439" y="90" width="116" height="20" uuid="47b5efc0-dbcb-4914-a7e6-1770c5a93149"/>
+				<text><![CDATA[Namba  ya  kitambulisho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="110" width="150" height="20" uuid="f8a09a26-98cd-434c-bcd2-96e82d831bd6"/>
+				<text><![CDATA[Cha  Mwombaji  wa Mkopo ni ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="110" width="128" height="20" uuid="219f4a0b-6d9f-4b40-a650-aa161e3a35ef"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Id_number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="143" width="555" height="20" forecolor="#FFFFFF" backcolor="#006666" uuid="158ee21b-fd2d-48a1-ad7f-cf9e9415eb0a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ SEHEMU  B: VYANZO  VYA  MAPATO  VYA  MOMBAJI ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="163" width="553" height="20" uuid="a830aaaf-b158-4c4d-a8f5-7543ea4b3777"/>
+				<text><![CDATA[Vifuatavyo  ni vyanzo vikuu  vya  mapato ambavyo   vinamwingizia  kipato  mwombaji  nje na mkopo  huu.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="183" width="122" height="20" uuid="f446e869-0bf2-400b-84db-96c457ebe83c"/>
+				<text><![CDATA[Chanzo  cha  kwanza  ni ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="128" y="183" width="135" height="20" uuid="d0c66c1c-3733-4f3e-84af-a90044be5f93"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="269" y="183" width="170" height="20" uuid="375cdd76-16ae-4c84-bd08-9ce182c5ef5b"/>
+				<text><![CDATA[Makadrio ya kipato kwa mwezi  ni ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="437" y="183" width="118" height="20" uuid="c37871b9-29ed-44b2-930f-3cf0ee611336"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BIncome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="203" width="122" height="20" uuid="8bb2154f-7e97-4038-a5ed-3eca1b3f3f32"/>
+				<text><![CDATA[Chanzo cha  Pili  ni ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="128" y="203" width="135" height="20" uuid="c38cc31a-79aa-432a-8b72-d9b3558f60b4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OSource}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="269" y="203" width="168" height="20" uuid="58e0302a-aaef-4c0d-8292-7a7b6c4a1238"/>
+				<text><![CDATA[Makadrio ya  mapato  kwa mwezi ni ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="439" y="203" width="114" height="20" uuid="79112e4c-ffc1-4537-b202-720148d6d044"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OIncome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="256" width="555" height="20" forecolor="#FFFFFF" backcolor="#006666" uuid="6c0f8b08-153a-443b-8e7d-e7fb80885ffa"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEHEMU  C:  MALI ALIZO  WEKA  DHAMANA  KATIKA  MKOPO WAKE ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="276" width="95" height="20" uuid="bd5eea72-52fa-4c26-9bbf-7a04d69bded2"/>
+				<text><![CDATA[Mali  ya  kwanza  :: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="306" width="150" height="20" uuid="e251ff71-b8de-48ff-92e1-310f8ee7a4ea"/>
+				<text><![CDATA[Malezo  binafsi  ya mali hiyo :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="387" width="77" height="20" uuid="fbcaa58d-1329-4d7a-976a-ff5d744b2211"/>
+				<text><![CDATA[Mali  ya pili ::]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="419" width="150" height="20" uuid="31db84e1-3508-47a2-ad0d-e8b770e92a96"/>
+				<text><![CDATA[Maelezo binafsi ya mali hiyo: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="99" y="276" width="270" height="20" uuid="957a81fe-33c1-4e44-993c-e830e21d7af9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FProperty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="387" width="291" height="20" uuid="41934ff8-ec9f-4fb9-b5a6-42f978be762f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SProperty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="476" width="292" height="20" uuid="ece4ed88-8d12-4396-99dc-14a3827d4b40"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TProperty}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="476" width="78" height="20" uuid="d18536d4-94a2-475b-9566-637d2cd9a10a"/>
+				<text><![CDATA[Mali  ya Tatu : ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="6" y="327" width="521" height="48" uuid="6210fa20-b05b-45bc-a1db-a2cf007581a8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="6" y="439" width="521" height="37" uuid="feebfaad-1891-43ed-ba79-6f3b094c0c7e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="6" y="496" width="144" height="20" uuid="f8908651-daed-4b20-9245-5cc91d8df442"/>
+				<text><![CDATA[Maelezo  binafsi ya mali hiyo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="4" y="517" width="551" height="21" forecolor="#FFFFFF" backcolor="#006666" uuid="7973d087-4836-49b2-8c77-9cd99a327880"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEHEMU  D:  MALIPO  YA  GHARAMA  ZA  USAJIRI ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="541" width="365" height="20" uuid="4d8316ed-52c5-4909-86e6-8ac463783b83"/>
+				<text><![CDATA[Mwanachama  amefanikiwa  kulipa  kiasi cha  pesa za kitanzania Shilingi ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="369" y="541" width="100" height="20" uuid="42638373-89ad-4ce5-9bb5-5600e37ada56"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Fees}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="469" y="541" width="84" height="20" uuid="04e9796f-7b1a-462e-80b9-959adfa918ff"/>
+				<text><![CDATA[Kama  sehemu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="561" width="554" height="20" uuid="15d470c1-264e-411d-9fdb-af28ddef434b"/>
+				<text><![CDATA[Ya kukamilisha  usajiri wake  na  kumwezesha kuendelea  na hatua zingine  za kuomba  maombi ya  mkopo ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="139" height="20" uuid="4b2908cd-88b7-459b-8a17-26fc4a695b92"/>
+				<text><![CDATA[Namba  ya simu  ya mteja ::]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="20" width="118" height="20" uuid="a519e497-368c-4fde-9fb9-da31eabea6db"/>
+				<text><![CDATA[Barua pepe ya Mteja ::]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="0" width="167" height="20" uuid="61aafe5f-6c39-4e61-8506-b539c68a5ff4"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="20" width="167" height="20" uuid="6d4acef5-97c7-44c1-bab6-200c5dfcb366"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="580" width="556" height="77" uuid="aeb9ab30-cc00-4758-b61d-375af9678413"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="-1" y="581" width="558" height="20" forecolor="#FFFFFF" backcolor="#009999" uuid="a1373492-b042-47f5-b627-e991d9dc43e1"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KWA  MATUMIZI  YA  OFISI  TU]]></text>
+			</staticText>
+			<line>
+				<reportElement x="6" y="617" width="547" height="2" uuid="b01c732c-2ff6-46ba-a925-f84e1cbef9a9"/>
+			</line>
+			<line>
+				<reportElement x="5" y="639" width="547" height="2" uuid="9e913de8-e535-41df-90eb-a92c7119aee4"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
